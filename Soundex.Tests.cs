@@ -14,23 +14,23 @@ public class SoundexTests
         Assert.Equal("A000", Soundex.GenerateSoundex("A"));
     }
     [Fact]
-    public void HandlesSimpleName()
+    public void HandlesSimpleString()
     {
         Assert.Equal("N153", Soundex.GenerateSoundex("Navaneeth"));
     }
     [Fact]
-    public void HandlesNameWithDuplicates()
+    public void HandlesStringWithDuplicates()
     {
         Assert.Equal("W252", Soundex.GenerateSoundex("Washington"));
     }
         [Fact]
-    public void HandlesNameWithVowels()
+    public void HandlesStringWithVowels()
     {
         Assert.Equal("R163", Soundex.GenerateSoundex("Robert"));
     }
 
     [Fact]
-    public void HandlesNameWithSilentLetters()
+    public void HandlesStringWithSilentLetters()
     {
         Assert.Equal("P260", Soundex.GenerateSoundex("Pfiser"));
     }
@@ -42,43 +42,43 @@ public class SoundexTests
     }
 
     [Fact]
-    public void HandlesNameEndingInS()
+    public void HandlesStringEndingInS()
     {
         Assert.Equal("S536", Soundex.GenerateSoundex("Sanders"));
     }
 
     [Fact]
-    public void HandlesNameWithConsecutiveSameCodes()
+    public void HandlesStringWithConsecutiveSameCodes()
     {
         Assert.Equal("T520", Soundex.GenerateSoundex("Tymczak"));
     }
 
     [Fact]
-    public void HandlesNameWithNoConsonants()
+    public void HandlesStringWithNoConsonants()
     {
         Assert.Equal("A000", Soundex.GenerateSoundex("Aeo"));
     }
 
     [Fact]
-    public void HandlesVeryLongName()
+    public void HandlesVeryLongString()
     {
         Assert.Equal("H653", Soundex.GenerateSoundex("Hernandez"));
     }
 
     [Fact]
-    public void HandlesMixedCaseName()
+    public void HandlesMixedCaseString()
     {
-        Assert.Equal("A510", Soundex.GenerateSoundex("Ameba"));
+        Assert.Equal("A510", Soundex.GenerateSoundex("AmeBa"));
     }
 
     [Fact]
-    public void HandlesNameWithSpaces()
+    public void HandlesStringWithSpaces()
     {
         Assert.Equal("D426", Soundex.GenerateSoundex("De La Cruz"));
     }
 
     [Fact]
-    public void HandlesHyphenatedName()
+    public void HandlesHyphenatedString()
     {
         Assert.Equal("M234", Soundex.GenerateSoundex("Mac-Dowell"));
     }
