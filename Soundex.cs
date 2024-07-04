@@ -22,7 +22,7 @@ public class Soundex
         }
 
         StringBuilder soundex = BuildSoundex(name);
-        PadWithZeros(soundex);
+        AppendWithZeroes(soundex);
 
         return soundex.ToString();
     }
@@ -57,7 +57,7 @@ public class Soundex
         return code != '0' && code != prevCode;
     }
 
-    private static void PadWithZeros(StringBuilder soundex)
+    private static void AppendWithZeroes(StringBuilder soundex)
     {
         while (soundex.Length < 4)
         {
