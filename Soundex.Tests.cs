@@ -21,12 +21,12 @@ public class SoundexTests
     [Fact]
     public void HandlesStringWithDuplicates()
     {
-        Assert.Equal("W252", Soundex.GenerateSoundex("Washington"));
+        Assert.Equal("W252", Soundex.GenerateSoundex("WashingtonDC"));
     }
         [Fact]
     public void HandlesStringWithVowels()
     {
-        Assert.Equal("R163", Soundex.GenerateSoundex("Robert"));
+        Assert.Equal("N623", Soundex.GenerateSoundex("NewYorkCity"));
     }
 
     [Fact]
@@ -44,7 +44,7 @@ public class SoundexTests
     [Fact]
     public void HandlesStringEndingInS()
     {
-        Assert.Equal("S536", Soundex.GenerateSoundex("Sanders"));
+        Assert.Equal("H213", Soundex.GenerateSoundex("HouseOfDragons"));
     }
 
     [Fact]
@@ -56,7 +56,7 @@ public class SoundexTests
     [Fact]
     public void HandlesStringWithNoConsonants()
     {
-        Assert.Equal("A000", Soundex.GenerateSoundex("Aeo"));
+        Assert.Equal("A000", Soundex.GenerateSoundex("AeioU"));
     }
 
     [Fact]
@@ -74,12 +74,12 @@ public class SoundexTests
     [Fact]
     public void HandlesStringWithSpaces()
     {
-        Assert.Equal("D426", Soundex.GenerateSoundex("De La Cruz"));
+        Assert.Equal("S534", Soundex.GenerateSoundex("Santa De La Cruz"));
     }
 
     [Fact]
     public void HandlesHyphenatedString()
     {
-        Assert.Equal("M234", Soundex.GenerateSoundex("Mac-Dowell"));
+        Assert.Equal("M235", Soundex.GenerateSoundex("Mc-Donalds"));
     }
 }
